@@ -13,9 +13,9 @@ jobs:
   release-binary:
     strategy:
       matrix:
-        os: [ linux, windows, darwin ] # 需要打包的系统
-        arch: [ amd64, arm64 ] # 需要打包的架构
-        exclude: # 排除某些平台和架构
+        os: [ linux, windows, darwin ]
+        arch: [ amd64, arm64 ]
+        exclude:
           - goarch: arm64
             goos: windows
           - goarch: arm64

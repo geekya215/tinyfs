@@ -1,3 +1,3 @@
 module github.com/geekya215/tinyfs
 
-go 1.18
+go 1.21
