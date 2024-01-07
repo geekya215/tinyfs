@@ -13,13 +13,13 @@ jobs:
   release-binary:
     strategy:
       matrix:
-        os: [ linux, windows, darwin ] # 需要打包的系统
-        arch: [ amd64, arm64 ] # 需要打包的架构
-        exclude: # 排除某些平台和架构
-          - goarch: arm64
-            goos: windows
-          - goarch: arm64
-            goos: linux
+        os: [ linux, windows, darwin ]
+        arch: [ amd64, arm64 ]
+        exclude:
+          - arch: arm64
+            os: windows
+          - arch: arm64
+            os: linux
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
